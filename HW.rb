@@ -200,7 +200,7 @@ p coffee_average_per_person
 
   # Bonus
   puts "Bonus"
-  test = true
+  
   friend = " "
 friends = []
 while friend != "n" do
