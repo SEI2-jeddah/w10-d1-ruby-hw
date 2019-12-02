@@ -133,16 +133,60 @@ print "ANSWER 3 \n"
 coffee_average_per_person = []
 num = 0
 total = 0
-people.each do |person|
-    coffee_average_per_person.push(" name: " + person[:name])
-    transactions.each do |transaction|
-        if transactions[:type] == "COFFEE"
-            num +=1
-            total += transactions.amount
+ for i in people do
+    for x in i[:transactions] do
+        if x[:type] == "COFFEE"
+            num += 1
+            total += x[:amount]
         end
     end
-    result = total / num
-    coffee_average_per_person.push(" :coffee_average" + result)
+    average = total / num
+    print coffee_average_per_person =["#{i[:name]} " "coffee_average => " " #{average} "]
+    end
 
-end
-print coffee_average_per_person
+
+    # 4. Find the most expensive product for each store, with the store name:
+    stores = [
+      {
+          store_name: "Virgin",
+          products: [
+              {
+                  description: "PS4",
+                  price: 9384.33
+              },
+              {
+                  description: "Pen",
+                  price: 345.54
+              }
+          ]
+      },
+      {
+          store_name: "Manuel",
+          products: [
+              {
+                  description: "Bread",
+                  price: 654.44
+              },
+              {
+                  description: "Cheese",
+                  price: 323.43
+              }
+          ]
+      },
+      {
+          store_name: "Noon",
+          products: [
+              {
+                  description: "iPhone",
+                  price: 345.43
+              },
+              {
+                  description: "TV",
+                  price: 899.33
+              }
+          ]
+      }
+    ]
+    most_expensive_products_by_store = []
+
+    print "ANSWER 4 \n"
