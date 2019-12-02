@@ -71,67 +71,119 @@
 
 #   p first_order_for_each_user
 
-# 3. Find the average amount spent on coffee, per transaction, for each person
-people = [
-    {
-        name: "Ashjan",
-        transactions: [
-            {
-                type: "COFFEE",
-                amount: 7.43
-            },
-            {
-                type: "TACOS",
-                amount: 14.65
-            },
-            {
-                type: "COFFEE",
-                amount: 4.43
-            }
-        ]
-    },
-    {
-        name: "Abeer",
-        transactions: [
-            {
-                type: "BIKES",
-                amount: 800.00
-            },
-            {
-                type: "TACOS",
-                amount: 14.65
-            },
-            {
-                type: "COFFEE",
-                amount: 4.43
-            }
-        ]
-    },
-    {
-        name: "Nujud",
-        transactions: [
-            {
-                type: "COFFEE",
-                amount: 7.43
-            },
-            {
-                type: "COFFEE",
-                amount: 100.00
-            },
-            {
-                type: "COFFEE",
-                amount: 4.43
-            }
-        ]
-    }
-  ]
-  coffee_average_per_person = []
+# # 3. Find the average amount spent on coffee, per transaction, for each person
+# people = [
+#     {
+#         name: "Ashjan",
+#         transactions: [
+#             {
+#                 type: "COFFEE",
+#                 amount: 7.43
+#             },
+#             {
+#                 type: "TACOS",
+#                 amount: 14.65
+#             },
+#             {
+#                 type: "COFFEE",
+#                 amount: 4.43
+#             }
+#         ]
+#     },
+#     {
+#         name: "Abeer",
+#         transactions: [
+#             {
+#                 type: "BIKES",
+#                 amount: 800.00
+#             },
+#             {
+#                 type: "TACOS",
+#                 amount: 14.65
+#             },
+#             {
+#                 type: "COFFEE",
+#                 amount: 4.43
+#             }
+#         ]
+#     },
+#     {
+#         name: "Nujud",
+#         transactions: [
+#             {
+#                 type: "COFFEE",
+#                 amount: 7.43
+#             },
+#             {
+#                 type: "COFFEE",
+#                 amount: 100.00
+#             },
+#             {
+#                 type: "COFFEE",
+#                 amount: 4.43
+#             }
+#         ]
+#     }
+#   ]
+#   coffee_average_per_person = []
+#   names = []
 
-#   p people[2][:transactions][1][:type] == "COFFEE"
+# y = []
+#   people.map do |tran|
+#     arr1 = []
+#     tran[:transactions].map do |type|
+#        type[:type] == "COFFEE"? arr1.push(type[:amount]):false
+#     end
+#     x = 0
+#     arr1.length.times{ |i| x+= arr1[i]}
+#    x = x/arr1.length
+#    y.push(x)
 
-  people.map do |tran|
-    tran[:transactions].map do |type|
-       p type[:type] == "COFFEE"? type[:amount]:false
-    end
+#   end
+#    people.map.with_index do |tran, idx| 
+#     names.push( Hash["name" => tran[:name], :coffee_average=>y[idx]]) end
+# p names
 
-  end
+# 4. Find the most expensive pstores = [
+  {
+    store_name: "Virgin",
+    products: [
+        {
+            description: "PS4",
+            price: 9384.33
+        },
+        {
+            description: "Pen",
+            price: 345.54
+        }
+    ]
+},
+{
+    store_name: "Manuel",
+    products: [
+        {
+            description: "Bread",
+            price: 654.44
+        },
+        {
+            description: "Cheese",
+            price: 323.43
+        }
+    ]
+},
+{
+    store_name: "Noon",
+    products: [
+        {
+            description: "iPhone",
+            price: 345.43
+        },
+        {
+            description: "TV",
+            price: 899.33
+        }
+    ]
+}
+]
+most_expensive_products_by_store = []
+
