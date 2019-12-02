@@ -1,9 +1,3 @@
-# 3.times { |i| puts i }
-
-# names = ["Ebere","Yassir","Ahmad", "Atheer", "Mike", "Sami" , "Alanoud" ]
-
-# names.length.times{ |i| puts "hello #{i} = #{names[i]}"}
-
 # 1. Return an array of each Student’s full name, upper-cased
 puts "===================="
 students = [
