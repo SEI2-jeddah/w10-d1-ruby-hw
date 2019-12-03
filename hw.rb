@@ -125,6 +125,7 @@ people = [
         ]
     }
   ]
+  
   coffee_average_per_person = []
   names = []
 
@@ -186,10 +187,13 @@ stores = [
     ]
 }
 ]
+
 most_expensive_products_by_store = []
+
  stores.map.with_index do |pro, idx| 
   most_expensive_products_by_store.push(Hash["store_name" => stores[idx][:store_name], :most_expensive_product=>Hash[
     pro[:products][0][:price] > pro[:products][1][:price]? pro[:products][0] : pro[:products][1]
   ]])
 end 
+
 p most_expensive_products_by_store
