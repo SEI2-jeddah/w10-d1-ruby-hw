@@ -12,8 +12,18 @@ students = [
       last_name: "Alalawi",
   }
 ]
-upper_case_full_names = students.map {|studnet| "#{studnet[:first_name].upcase} #{studnet[:last_name].upcase}"}
-p upper_case_full_names
+upper_case_full_names = []
+
+
+
+for names in students do
+    upper_case_full_names.map{|students| [:first_name.upcase] + "." +[:last_name.upcase]}
+
+  print upper_case_full_names.upcase
+  puts full_names
+
+
+
 
 users = [
   {
@@ -53,8 +63,10 @@ users = [
       ]
   }
 ]
-first_order_for_each_user = users.map {|user| user[:orders][0]}
-p first_order_for_each_user
+first_order_for_each_user = users.map{|orders| orders.first }
+print first_order_for_each_user
+
+####################
 
 people = [
   {
@@ -109,9 +121,18 @@ people = [
       ]
   }
 ]
-coffee_average_per_person = people.map {|person|  {name: person[:name], coffee_average: person[:transactions].inject(0) {|sum, item| item[:type] == "COFFEE"? sum+item[:amount]: sum} / person[:transactions].reduce(0){ |sum, item| item[:type] == "COFFEE"? sum+1: sum}}}
-puts coffee_average_per_person
+coffee_average_per_person = []
 
+for person in people do
+    people.map{
+
+
+    }
+[
+  {name: "Ashjan", :coffee_average=>5.93},
+  {name: "Abeer", :coffee_average=>4.43},
+  {name: "Nujud", :coffee_average=>37.28666666666667}
+]
 
 stores = [
   {
@@ -154,5 +175,15 @@ stores = [
       ]
   }
 ]
-most_expensive_products_by_store = stores.map {|store|  {store_name: store[:store_name], most_expensive_product: store[:products].max_by {|item| item[:price]}}}
-puts most_expensive_products_by_store
+most_expensive_products_by_store = []
+
+stores.each{|i|}
+most_expensive_products = i[:products].max_by{|j| j[:price]}
+print most_expensive_product
+
+
+[
+  {store_name: "Virgin", most_expensive_product: { description: "PS4", price: 9384.33}},
+  {store_name: "Manuel", most_expensive_product: { description: "Bread", price: 654.44}},
+  {store_name: "Noon", most_expensive_product: { description: "TV", price: 899.33}}
+]
