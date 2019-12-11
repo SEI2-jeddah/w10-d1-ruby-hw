@@ -143,7 +143,7 @@ total = 0
     average = total / num
     print coffee_average_per_person =["#{i[:name]} " "coffee_average => " " #{average} "]
     end
-
+print "\n"
 
     # 4. Find the most expensive product for each store, with the store name:
     stores = [
@@ -187,6 +187,29 @@ total = 0
           ]
       }
     ]
-    most_expensive_products_by_store = []
+    
 
     print "ANSWER 4 \n"
+
+    most_expensive_products_by_store = stores.map do |store|
+
+        expensive_product = 0
+    
+        description = ""
+    
+        store[:products].each do |desc|
+    
+         if desc[:price]  >  expensive_product
+    
+            expensive_product = desc[:price]
+    
+            description = desc[:description]
+    
+         end
+    
+        end
+    
+     
+     p most_expensive_products_by_store= [ :store_name=> store[:store_name] , :most_expensive_product=> { description:description , price: expensive_product}] 
+    
+    end
